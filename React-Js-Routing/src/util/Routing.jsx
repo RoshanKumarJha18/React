@@ -9,13 +9,12 @@ import UserDetail from '../components/UserDetail'
 const Routing = () => {
   return (
     <div>
-      <Routes className="flex justify-center gap-10 p-10" >
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/about" element={<About />}>
         <Route path='/about/:name' element={<UserDetail />} />
         </Route> 
-        
       </Routes>
     </div>
   )

@@ -7,7 +7,7 @@ const About = () => {
       <Link to="/about/Roshan" className="text-blue-500 font-bold">Roshan</Link>
       <Link to="/about/Akash" className="text-blue-500 font-bold">Akash</Link>
       <Link to="/about/Ajay" className="text-blue-500 font-bold">Ajay</Link>
-      <Outlet />
+      <Outlet />  {/*This will render the UserDetail component when a specific user is clicked */}
     </div>
   )
 }
