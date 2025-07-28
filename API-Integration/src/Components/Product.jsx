@@ -1,11 +1,12 @@
-import axios from 'axios';
-import React, { useState } from 'react'
+import axios from '../Util/axios';
+import React, { useEffect, useState } from 'react'
 
 const Product = () => {
     const [products, setproducts] = useState([]);
 
+
   const getProducts = () => {
-    const api = "https://fakestoreapi.com/products";
+    const api = "/products";
 
     axios
       .get(api)
@@ -33,6 +34,10 @@ const Product = () => {
       .then((ref) => console.log(ref))
       .catch((err) => console.log(err));
   };
+
+  useEffect(()=>{
+    getProducts();
+  },[])
   return (
     <div className="p-8 flex flex-col gap-5">
       <button
